@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.cache/
+
+.env
+
+logs/
+*.log
+test-results/
+
+.vscode/
+.idea/
+*.suo
+*.user
