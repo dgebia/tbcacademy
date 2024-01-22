@@ -1,0 +1,314 @@
+@font-face {
+    font-family: 'BPGNinoEliteCondCaps';
+    /* Название первого шрифта */
+    src: url('src/assets/fonts/bpg_nino_elite_cond_caps.ttf') format('truetype');
+    /* Путь к файлу первого шрифта */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* @font-face {
+    font-family: 'YourFontName2';
+    src: url('path/to/fontfile2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    background-color: darkslategrey;
+    font-family: 'BPGNinoEliteCondCaps', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+/* =====================  HEADER ==================================================================== */
+
+.grid-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 84px;
+    width: 100%;
+    background: #1A1E1F;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    margin-bottom: 84px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 980px;
+    height: 40px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    height: 26px;
+    text-align: right;
+}
+
+.menu-items {
+    display: flex;
+    line-height: 26px;
+    justify-content: right;
+    align-items: center;
+    list-style-type: none;
+    padding-left: 38px;
+    font-size: 15px;
+    letter-spacing: 0.5px
+}
+
+.menu-items>a {
+    color: #F4F4F4;
+    text-decoration: none;
+    padding: 0 5px;
+    height: 100%;
+}
+
+.menu-items>a:hover {
+    color: #00A3E0;
+}
+
+.vector-image {
+    height: 40px;
+}
+
+.svg-root {
+    height: 40px;
+}
+
+/* =====================  MAIN ==================================================================== */
+
+main {
+    margin-top: 84px;
+    width: 100%;
+}
+
+/* ==== section of thesis ====*/
+
+.thesis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://static.wixstatic.com/media/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg/v1/fill/w_1903,h_352,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 352px;
+    width: 100%;
+    color: #F4F4F4;
+}
+
+.thesis-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 980px;
+    font-weight: 900;
+    padding-bottom: 35px;
+}
+
+.thesis-title {
+    text-align: left;
+    font-size: 48px;
+    line-height: 1.6em;
+}
+
+.thesis,
+p {
+    text-align: left;
+    font-size: 34px;
+    line-height: 1.6em;
+}
+
+/* ==== section of description ====*/
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2B2B2B;
+    width: 100%;
+    color: #F4F4F4;
+}
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 980px;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+.description-about {
+    font-size: 30px;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    margin-top: 56px;
+    margin-bottom: 43px;
+    font-weight: 300;
+}
+
+.description-about-read-more {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    height: 40px;
+    margin-bottom: 57px;
+    color: #00A3F0;
+}
+
+/* ==== section of courses ====*/
+
+.courses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #161616;
+    width: 100%;
+    /* height: 1485px; */
+    color: #DBDBDB;
+    padding: 36px 0;
+}
+
+.courses-section-title {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 34px;
+    width: 980px;
+    margin-bottom: 54.5px;
+}
+
+.courses-section-title>h2 {
+    font-size: 26px;
+    letter-spacing: 1.5px;
+    font-weight: 100;
+}
+
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 980px;
+    margin: 0 auto;
+}
+
+.courses-container>article {
+    /* flex: 1; */
+    /* flex: 1 0 30%; */
+    /* flex: 0 0 calc(300px); */
+    /* flex: 0 0 calc(48% - 12.5px); */
+    position: relative;
+    width: 300px;
+    height: 414px;
+    margin: 12.5px 0;
+    --bg-overlay-color: rgb(22, 22, 22);
+    --bg-gradient: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(85, 85, 85, 1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.courses-container>article img {
+    width: 300px;
+    height: 150px;
+    margin-bottom: 34px;
+}
+
+.courses-container>article>h3 p a {
+    margin-left: 22px;
+}
+
+.courses-container>article>h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    font-weight: 200;
+    line-height: 1.5em;
+    margin-left: 22px;
+    box-sizing: border-box;
+}
+
+.courses-container>article p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    margin-left: 22px;
+}
+
+.courses-container>article a {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 21px;
+    margin-left: 22px;
+    font-size: 18px;
+    color: #00AEEF;
+    text-decoration: none;
+}
+
+/* ==== section of partners ====*/
+
+.partners {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    height: 363.39px;
+    background-color: #2B2B2B;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 980px;
+    margin: 0 auto;
+}
+
+.partners>h2 {
+    width: 980px;
+}
+
+.partners-slaider-container {
+    display: flex;
+    align-items: center;
+    width: 980px;
+}
+
+
+
+
+@media (max-width: 980px) {
+
+    .courses-container>article {
+        flex: 0 1 calc(48% - 24px);
+    }
+
+    .courses-container .courses-section-title {
+        width: 760px;
+    }
+
+}
