@@ -1,19 +1,3 @@
-@font-face {
-    font-family: 'BPGNinoEliteCondCaps';
-    /* Название первого шрифта */
-    src: url('src/assets/fonts/bpg_nino_elite_cond_caps.ttf') format('truetype');
-    /* Путь к файлу первого шрифта */
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* @font-face {
-    font-family: 'YourFontName2';
-    src: url('path/to/fontfile2.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-} */
-
 * {
     margin: 0;
     padding: 0;
@@ -29,11 +13,28 @@ html {
 }
 
 /* =====================  HEADER ==================================================================== */
+.header {
+    grid-area: header;
+    height: 84px;
+}
+
+.main {
+    grid-area: main;
+    height: 1fr;
+}
+
+.footer {
+    grid-area: footer;
+    height: 228.39px;
+}
 
 .grid-container {
     display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
+    grid-template-areas:
+        'header'
+        'main'
+        'footer';
+    height: 100%;
 }
 
 .header {
@@ -41,7 +42,6 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 84px;
     width: 100%;
     background: #1A1E1F;
     z-index: 999;
@@ -97,9 +97,9 @@ nav {
 
 /* =====================  MAIN ==================================================================== */
 
-main {
+.main {
     margin-top: 84px;
-    width: 100%;
+    width: auto;
 }
 
 /* ==== section of thesis ====*/
@@ -123,18 +123,17 @@ main {
     justify-content: center;
     align-items: start;
     width: 980px;
-    font-weight: 900;
     padding-bottom: 35px;
 }
 
 .thesis-title {
     text-align: left;
     font-size: 48px;
+    font-weight: 900;
     line-height: 1.6em;
 }
 
-.thesis,
-p {
+.thesis-title>span {
     text-align: left;
     font-size: 34px;
     line-height: 1.6em;
@@ -192,7 +191,6 @@ p {
     align-items: center;
     background-color: #161616;
     width: 100%;
-    /* height: 1485px; */
     color: #DBDBDB;
     padding: 36px 0;
 }
@@ -221,10 +219,6 @@ p {
 }
 
 .courses-container>article {
-    /* flex: 1; */
-    /* flex: 1 0 30%; */
-    /* flex: 0 0 calc(300px); */
-    /* flex: 0 0 calc(48% - 12.5px); */
     position: relative;
     width: 300px;
     height: 414px;
@@ -263,7 +257,7 @@ p {
     margin-left: 22px;
 }
 
-.courses-container>article a {
+.courses-container>article>a {
     position: absolute;
     bottom: 0;
     margin-bottom: 21px;
@@ -275,31 +269,340 @@ p {
 
 /* ==== section of partners ====*/
 
+.slider-control-prev {
+    width: 35px;
+    margin-left: 35px
+}
+
+.slider-container {
+    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    position: relative;
+    overflow: hidden;
+    width: 980px;
+    height: 74px;
+}
+
+.slider-container2 {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 980px;
+    height: 74px;
+}
+
+.slider-container3 {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    position: relative;
+    overflow: hidden;
+    width: 980px;
+    height: 74px;
+}
+
 .partners {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
+    align-items: center;
     height: 363.39px;
     background-color: #2B2B2B;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    width: 980px;
     margin: 0 auto;
 }
 
 .partners>h2 {
+    display: flex;
     width: 980px;
+    height: 99px;
+    align-items: center;
 }
 
-.partners-slaider-container {
+/* .usaid {}
+
+.space-int {} */
+
+.tnet {
+    width: 250px;
+    height: 45px;
+}
+
+/* .tegeta {}
+
+.spectre {}
+
+.tbc-lisinf {}
+
+.ufs {} */
+
+.slider-container>figure>img {
+    overflow: hidden;
+    display: flex;
+    max-height: 74px;
+    /* min-width: 326.666px; */
+    justify-content: space-between;
+    align-items: start;
+}
+
+.slider-control {
+    height: 35px;
+}
+
+/* ==== section of questions ====*/
+
+.pop-questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #161616;
+    padding-bottom: 54px;
+}
+
+.pop-questions>header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.pop-questions>header>h2 {
+    font-size: 26px;
+    color: #F4F4F4;
+    font-weight: 100;
+    height: 34px;
+}
+
+.pop-questions>header>a {
     display: flex;
     align-items: center;
-    width: 980px;
+    /* justify-content: space-between; */
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    height: 34px;
+    /* margin-bottom: 57px; */
+    color: #00A3F0;
 }
 
+.pop-questions>header>a>span {
+    height: 34px;
+}
 
+.questions-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    color: #F4F4F4;
+    width: 900px;
+    padding-bottom: 30px;
+}
 
+.question {
+    border-bottom: 1px solid #353131;
+}
+
+.question>header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 15px 0; */
+    width: 900px;
+    height: 37px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.question-title {
+    font-size: 20px;
+    /* letter-spacing: 1px; */
+    line-height: 1.5em;
+    /* padding-top: 2px; */
+    font-weight: 300;
+    padding-bottom: 3px;
+    /* height: 80px; */
+    margin-left: 4px;
+}
+
+.question>h4 {
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    padding-top: 2px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    height: 33px;
+    margin-left: 4px;
+}
+
+.question>p {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 2em;
+    margin-left: 24px;
+    width: 900px;
+
+}
+
+.question p:last-child {
+    padding-bottom: 30px;
+}
+
+.question>footer>p {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 2em;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.arrow-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00A3F0;
+    position: relative;
+    margin-right: 5px;
+}
+
+.line1 {
+    width: 7px;
+    height: 7px;
+    border-left: 1px solid;
+    transform: rotate(-135deg);
+    position: absolute;
+}
+
+.line2 {
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid;
+    transform: rotate(-135deg);
+    position: absolute;
+}
+
+.footer {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    background-color: #1A1E1F;
+
+    /* padding-bottom: 43px; */
+}
+
+.footer-sections-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 980px;
+    height: 121px;
+    margin-top: 64px;
+}
+
+.footer-section-copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 121px;
+    color: #F4F4F4;
+}
+
+.footer-section-copyright>a {
+    text-decoration: none;
+    color: #F4F4F4;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.footer-section-copyright>a {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.footer-section-copyright>a:hover {
+    color: #999494;
+}
+
+.footer-section-copyright>span {
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+    letter-spacing: 1px;
+}
+
+.footer-section-copyright>span>a {
+    display: flex;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #F4F4F4;
+}
+
+.footer-section-copyright>span>a>span {
+    font-size: 10px;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.socials-list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    height: 39;
+    width: 88px;
+    margin-bottom: 40px;
+}
+
+.send-email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 1px solid #00AEEF;
+    border-radius: 6px;
+    width: 162px;
+    height: 39px;
+    background-color: #00AEEF;
+}
+
+.send-email>span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    font-size: 18px;
+    width: 162px;
+    height: 39px;
+    color: #F4F4F4;
+}
+
+.send-email:hover {
+    background-color: #d5d5d5;
+}
+
+.send-email>span:hover {
+    color: #161616
+}
 
 @media (max-width: 980px) {
 
