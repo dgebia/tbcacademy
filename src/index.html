@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ვებ გვერდი TBC x USAID ტექნოლოქიური განათლების პროგრამის შესახებ">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="canonical" href="https://www.tbcacademy.ge/usaid">
     <title>TBC x USAID</title>
 </head>
@@ -79,11 +78,11 @@
                         </div>
                     </a>
                 </div>
-                <ul class="menu">
-                    <li class="menu-items"><a href="#" class="menu-item">მთავარი</a></li>
-                    <li class="menu-items"><a href="#" class="menu-item">TBC IT</a></li>
-                    <li class="menu-items"><a href="#" class="menu-item">TBC x USAID</a></li>
-                    <li class="menu-items"><a href="#" class="menu-item">რისკები</a></li>
+                <ul class="menu-items">
+                    <li class="menu-item"><a class="menu-item-link" href="#">მთავარი</a></li>
+                    <li class="menu-item"><a class="menu-item-link" href="#">TBC IT</a></li>
+                    <li class="menu-item"><a class="menu-item-link" href="#">TBC x USAID</a></li>
+                    <li class="menu-item"><a class="menu-item-link" href="#">რისკები</a></li>
                 </ul>
             </nav>
         </header>
@@ -194,51 +193,93 @@
             </section>
             <section class="partners">
                 <h2 class="partners-section-title">პროექტის პარტნიორები</h2>
-                <button type="button" class="slider-control-prev" aria-label="Previous">&#8249; </button>
-                <div class="slider-container">
-                    <figure class="usaid">
-                        <img src="https://static.wixstatic.com/media/93e8a3_a356bb7d201f4f47870683655e9e4120~mv2.png/v1/fill/w_369,h_111,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Asset%204_2x_edited.png"
-                            alt="USAID" title="Description" loading="lazy">
-                        <figcaption class="visually-hidden">USAID</figcaption>
-                    </figure>
-                    <figure class="space-int">
-                        <img src="https://static.wixstatic.com/media/93e8a3_eaf33552ffd5463e96a5f776dda00111~mv2.png/v1/fill/w_362,h_120,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/White%20horiz.png"
-                            alt="SPACE int" title="Description" loading="lazy">
-                        <figcaption class="visually-hidden">SPACE</figcaption>
-                    </figure>
-                    <figure class="tnet">
-                        <img src="https://static.wixstatic.com/media/93e8a3_ae4ade72135b4c7eaa531290232fe5aa~mv2.png/v1/fill/w_250,h_45,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/93e8a3_ae4ade72135b4c7eaa531290232fe5aa~mv2.png"
-                            alt="TNET">
-                        <!-- <img src="https://static.wixstatic.com/media/93e8a3_ae4ade72135b4c7eaa531290232fe5aa~mv2.png/v1/fill/w_375,h_68,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/93e8a3_ae4ade72135b4c7eaa531290232fe5aa~mv2.png"
-                            alt="TNET" title="Description" loading="lazy"> -->
-                        <figcaption class="visually-hidden">TNET</figcaption>
-                    </figure>
+                <div class="sliders-container">
+                    <div class="prev-svg-container">
+                        <svg id="prev" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            version="1.1" viewBox="0 0 256 256" xml:space="preserve">
+                            <defs></defs>
+                            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+                                transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                                <path
+                                    d="M 65.75 90 c 0.896 0 1.792 -0.342 2.475 -1.025 c 1.367 -1.366 1.367 -3.583 0 -4.949 L 29.2 45 L 68.225 5.975 c 1.367 -1.367 1.367 -3.583 0 -4.95 c -1.367 -1.366 -3.583 -1.366 -4.95 0 l -41.5 41.5 c -1.367 1.366 -1.367 3.583 0 4.949 l 41.5 41.5 C 63.958 89.658 64.854 90 65.75 90 z"
+                                    style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #F4F4F4; fill-rule: nonzero; opacity: 1;"
+                                    transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="slider-sections">
+                        <section class="slider-section">
+                            <figure class="usaid">
+                                <img id="usaid"
+                                    src="https://static.wixstatic.com/media/93e8a3_a356bb7d201f4f47870683655e9e4120~mv2.png/v1/fill/w_369,h_111,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Asset%204_2x_edited.png"
+                                    alt="USAID" title="Description" loading="lazy">
+                                <figcaption class="visually-hidden">USAID</figcaption>
+                            </figure>
+                            <figure class="space-int">
+                                <img id="space-int"
+                                    src="https://static.wixstatic.com/media/93e8a3_eaf33552ffd5463e96a5f776dda00111~mv2.png/v1/fill/w_362,h_120,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/White%20horiz.png"
+                                    alt="SPACE int" title="Description" loading="lazy">
+                                <figcaption class="visually-hidden">SPACE</figcaption>
+                            </figure>
+                            <figure class="tnet">
+                                <img id="tnet"
+                                    src="https://static.wixstatic.com/media/93e8a3_ae4ade72135b4c7eaa531290232fe5aa~mv2.png/v1/fill/w_250,h_45,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/93e8a3_ae4ade72135b4c7eaa531290232fe5aa~mv2.png"
+                                    alt="TNET" title="Description" loading="lazy">
+                                <figcaption class="visually-hidden">TNET</figcaption>
+                            </figure>
+                        </section>
+                        <section class="slider-section2">
+                            <figure class="tegeta">
+                                <img id="tegeta"
+                                    src="https://static.wixstatic.com/media/93e8a3_b595f31239344928802dd7135813e17c~mv2.png/v1/fill/w_248,h_71,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Tegeta%20logo%20geo.png"
+                                    alt="TEGETA" title="Description" loading="lazy">
+                                <figcaption class="visually-hidden">TEGETA</figcaption>
+                            </figure>
+                            <figure class="spectre">
+                                <img id="spectre"
+                                    src="https://static.wixstatic.com/media/93e8a3_aca86c1c067d4f8585c3c2cb1b0a0178~mv2.png/v1/fill/w_187,h_64,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/93e8a3_aca86c1c067d4f8585c3c2cb1b0a0178~mv2.png"
+                                    alt="Spectre" title="Description" loading="lazy">
+                                <figcaption class="visually-hidden">Spectre</figcaption>
+                            </figure>
+                            <figure class="tbc-lising">
+                                <img id="tbc-lising"
+                                    src="https://static.wixstatic.com/media/93e8a3_b6ed8fb2602e4670bc83d1fd4a7d9283~mv2.png/v1/fill/w_312,h_95,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MicrosoftTeams-image%20(9).png"
+                                    alt="TBC LEASING" title="Description" loading="lazy">
+                                <figcaption class="visually-hidden">TBC LEASING</figcaption>
+                            </figure>
+                        </section>
+                        <section class="slider-section3">
+                            <figure class="ufs">
+                                <img id="ufs"
+                                    src="https://static.wixstatic.com/media/93e8a3_ef7860c1a2854f1c8fc20f867ffa30ab~mv2.png/v1/fill/w_341,h_96,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/UFC%20GEO%20PNG_edited.png"
+                                    alt="UFS" title="Description" loading="lazy">
+                                <figcaption class="visually-hidden">UFS</figcaption>
+                            </figure>
+                        </section>
+                    </div>
+                    <div class="next-svg-container">
+                        <svg id="next" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            version="1.1" viewBox="0 0 256 256" xml:space="preserve">
+                            <defs></defs>
+                            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+                                transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                                <path
+                                    d="M 65.75 90 c 0.896 0 1.792 -0.342 2.475 -1.025 c 1.367 -1.366 1.367 -3.583 0 -4.949 L 29.2 45 L 68.225 5.975 c 1.367 -1.367 1.367 -3.583 0 -4.95 c -1.367 -1.366 -3.583 -1.366 -4.95 0 l -41.5 41.5 c -1.367 1.366 -1.367 3.583 0 4.949 l 41.5 41.5 C 63.958 89.658 64.854 90 65.75 90 z"
+                                    style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #F4F4F4; fill-rule: nonzero; opacity: 1;"
+                                    transform=" matrix(1 0 0 1 0 0)" stroke-linecap="round" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="sliders-button">
+                        <input type="radio" name="slider" id="btn1" checked>
+                        <lable for="btn1"></lable>
+                        <input type="radio" name="slider" id="btn2">
+                        <lable for="btn2"></lable>
+                        <input type="radio" name="slider" id="btn3">
+                        <lable for="btn3"></lable>
+                    </div>
+
                 </div>
-                <div class="slider-container2">
-                    <figure class="tegeta">
-                        <img src="https://static.wixstatic.com/media/93e8a3_b595f31239344928802dd7135813e17c~mv2.png/v1/fill/w_248,h_71,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Tegeta%20logo%20geo.png"
-                            alt="TEGETA" title="Description" loading="lazy">
-                        <figcaption class="visually-hidden">TEGETA</figcaption>
-                    </figure>
-                    <figure class="spectre">
-                        <img src="https://static.wixstatic.com/media/93e8a3_aca86c1c067d4f8585c3c2cb1b0a0178~mv2.png/v1/fill/w_187,h_64,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/93e8a3_aca86c1c067d4f8585c3c2cb1b0a0178~mv2.png"
-                            alt="Spectre" title="Description" loading="lazy">
-                        <figcaption class="visually-hidden">Spectre</figcaption>
-                    </figure>
-                    <figure class="tbc-lisinf">
-                        <img src="https://static.wixstatic.com/media/93e8a3_b6ed8fb2602e4670bc83d1fd4a7d9283~mv2.png/v1/fill/w_312,h_95,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MicrosoftTeams-image%20(9).png"
-                            alt="TBC LEASING" title="Description" loading="lazy">
-                        <figcaption class="visually-hidden">TBC LEASING</figcaption>
-                    </figure>
-                </div>
-                <div class="slider-container3">
-                    <figure class="ufs">
-                        <img src="https://static.wixstatic.com/media/93e8a3_ef7860c1a2854f1c8fc20f867ffa30ab~mv2.png/v1/fill/w_341,h_96,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/UFC%20GEO%20PNG_edited.png"
-                            alt="UFS" title="Description" loading="lazy">
-                        <figcaption class="visually-hidden">UFS</figcaption>
-                    </figure>
-                </div>
-                <button type="button" class="slider-control-next" aria-label="Next">&#8250;</button>
             </section>
             <section class="pop-questions">
                 <header>
@@ -248,80 +289,86 @@
                 </header>
                 <ul class="questions-list">
                     <li>
-                        <article class="question">
-                            <header>
+                        <section class="question">
+                            <header class="question-header">
                                 <h3 class="question-title">როგორ ხდება კურსებზე რეგისტრაცია და შერჩევა?</h3>
                                 <span class="arrow-control">
-                                    <span class="line1"></span>
-                                    <span class="line2"></span>
+                                    <span class="arrow-down1"></span>
+                                    <span class="arrow-down2"></span>
                                 </span>
                             </header>
-                            <h4>კურსზე რეგისტრაციისთვის უნდა გაიარო რამდენიმე ეტაპი:</h4>
-                            <p> <strong>I ეტაპი -</strong> პირველ ეტაპზე საჭიროა, შეავსო სასურველი კურსისთვის
-                                განკუთვნილი
-                                სარეგისტრაციო ფორმა, რომელიც განთავსებულია კურსის შიდა გვერდზე. კურსზე რეგისტრაციის
-                                დასრულების
-                                შემდეგ დაიწყება შემოსული განცხადებების გადარჩევა.
-                            </p>
-                            <p> <strong>II ეტაპი -</strong>შერჩევის მეორე ეტაპი კურსების მიხედვით განსხვავებულია,
-                                ზოგიერთი
-                                კურსისთვის მოიცავს პრე-ტესტს, ზოგიერთ კურსზე კი უნარების ტესტს, სადაც მინიმალური
-                                ზღვარის
-                                გადალახვის შემთხვევაში გადახვალ შერჩევის შემდეგ ეტაპზე.
-                            </p>
-                            <p> <strong>III ეტაპი -</strong> მესამე ეტაპი კურსების მიხედვით განსხვავდება: Advance
-                                კურსებზე, სადაც
-                                მოითხოვება გარკვეული ტექნიკური ცოდნა, მონაწილეებმა უნდა დაწერონ ტექნიკური ტესტი
-                                ცოდნის
-                                დონის
-                                შესამოწმებლად, ხოლო კურსებზე, სადაც რაიმე ტიპის წინასწარი ცოდნა მოთხოვნილი არ არის
-                                უნდა
-                                შეასრულოთ ტექნიკური დავალება, რაც თქვენი კვლევისა და თვითსწავლის უნარს ამოწმებს.
-                            </p>
-                            <p> <strong>IV ეტაპი -</strong> შერჩევის ბოლო მეოთხე ეტაპი მოიცავს გასაუბრებას შესარჩევ
-                                კომისიასთან.
-                                გასაუბრების წარმატებით გავლის შემთხვევაში ჩაირიცხებით კურსზე და გაფორმდება
-                                შესაბამისი
-                                ხელშეკრულება.
-                            </p>
-                            <footer>
-                                <p>* სანამ კურსზე დარეგისტრირდები მნიშვნელოვანია, ყურადღებით წაიკითხო კურსის აღწერა,
-                                    ნახო
-                                    რას ისწავლი კურსის განმავლობაში და გაიგო გააჩნია თუ არა კურსს დასწრების
-                                    წინაპირობა.
+                            <article class="answer-close">
+                                <h4>კურსზე რეგისტრაციისთვის უნდა გაიარო რამდენიმე ეტაპი:</h4>
+                                <p> <strong>I ეტაპი -</strong> პირველ ეტაპზე საჭიროა, შეავსო სასურველი კურსისთვის
+                                    განკუთვნილი
+                                    სარეგისტრაციო ფორმა, რომელიც განთავსებულია კურსის შიდა გვერდზე. კურსზე რეგისტრაციის
+                                    დასრულების
+                                    შემდეგ დაიწყება შემოსული განცხადებების გადარჩევა.
                                 </p>
-                            </footer>
-                        </article>
+                                <p> <strong>II ეტაპი -</strong>შერჩევის მეორე ეტაპი კურსების მიხედვით განსხვავებულია,
+                                    ზოგიერთი
+                                    კურსისთვის მოიცავს პრე-ტესტს, ზოგიერთ კურსზე კი უნარების ტესტს, სადაც მინიმალური
+                                    ზღვარის
+                                    გადალახვის შემთხვევაში გადახვალ შერჩევის შემდეგ ეტაპზე.
+                                </p>
+                                <p> <strong>III ეტაპი -</strong> მესამე ეტაპი კურსების მიხედვით განსხვავდება: Advance
+                                    კურსებზე, სადაც
+                                    მოითხოვება გარკვეული ტექნიკური ცოდნა, მონაწილეებმა უნდა დაწერონ ტექნიკური ტესტი
+                                    ცოდნის
+                                    დონის
+                                    შესამოწმებლად, ხოლო კურსებზე, სადაც რაიმე ტიპის წინასწარი ცოდნა მოთხოვნილი არ არის
+                                    უნდა
+                                    შეასრულოთ ტექნიკური დავალება, რაც თქვენი კვლევისა და თვითსწავლის უნარს ამოწმებს.
+                                </p>
+                                <p> <strong>IV ეტაპი -</strong> შერჩევის ბოლო მეოთხე ეტაპი მოიცავს გასაუბრებას შესარჩევ
+                                    კომისიასთან.
+                                    გასაუბრების წარმატებით გავლის შემთხვევაში ჩაირიცხებით კურსზე და გაფორმდება
+                                    შესაბამისი
+                                    ხელშეკრულება.
+                                </p>
+                                <footer>
+                                    <p>* სანამ კურსზე დარეგისტრირდები მნიშვნელოვანია, ყურადღებით წაიკითხო კურსის აღწერა,
+                                        ნახო
+                                        რას ისწავლი კურსის განმავლობაში და გაიგო გააჩნია თუ არა კურსს დასწრების
+                                        წინაპირობა.
+                                    </p>
+                                </footer>
+                            </article>
+                        </section>
                     </li>
                     <li>
-                        <article class="question">
-                            <header>
+                        <section class="question">
+                            <header class="question-header">
                                 <h3 class="question-title">შემიძლია თუ არა ერთზე მეტ კურსზე რეგისტრაცია?</h3>
-                                <span class="arrow-down">
-                                    <span class="line1"></span>
-                                    <span class="line2"></span>
+                                <span class="arrow-control">
+                                    <span class="arrow-down1"></span>
+                                    <span class="arrow-down2"></span>
                                 </span>
                             </header>
-                            <p> <strong>TBC X USAID</strong> ტექნოლოგიური განათლებისთვის პროგრამაში თითოეულ
-                                კანდიდატს აქვს მხოლოდ ერთი კურსის გავლის შესაძლებლობა. გარდა Information Security და
-                                Python კურსებისა, სადაც Basic დონის გავლის შემდეგ შესაძლებელია სწავლის გაგრძელება
-                                Advance დონეზე.
-                            </p>
-                        </article>
+                            <article class="answer-close">
+                                <p> <strong>TBC X USAID</strong> ტექნოლოგიური განათლებისთვის პროგრამაში თითოეულ
+                                    კანდიდატს აქვს მხოლოდ ერთი კურსის გავლის შესაძლებლობა. გარდა Information Security და
+                                    Python კურსებისა, სადაც Basic დონის გავლის შემდეგ შესაძლებელია სწავლის გაგრძელება
+                                    Advance დონეზე.
+                                </p>
+                            </article>
+                        </section>
                     </li>
                     <li>
-                        <article class="question">
-                            <header>
+                        <section class=" question">
+                            <header class="question-header">
                                 <h3 class="question-title">რა ღირს სწავლა პროგრამის ფარგლებში?</h3>
-                                <span class="arrow-down">
-                                    <span class="line1"></span>
-                                    <span class="line2"></span>
+                                <span class="arrow-control">
+                                    <span class="arrow-down1"></span>
+                                    <span class="arrow-down2"></span>
                                 </span>
                             </header>
-                            <p>პროგრამის ფარგლებში კურსებზე სწავლა სრულიად დაფინანსებულია
-                                თიბისი ბანკისა და USAID-ის მიერ.
-                            </p>
-                        </article>
+                            <article class="answer-close">
+                                <p>პროგრამის ფარგლებში კურსებზე სწავლა სრულიად დაფინანსებულია
+                                    თიბისი ბანკისა და USAID-ის მიერ.
+                                </p>
+                            </article>
+                        </section>
                     </li>
                 </ul>
             </section>
@@ -329,10 +376,9 @@
         <footer class="footer">
             <div class="footer-sections-container">
                 <section class="footer-section-copyright">
-                    <img src="https://static.wixstatic.com/media/dd97f4_86c58c47370442a889e9a4e9db4eb00c~mv2.png/v1/crop/x_1,y_0,w_426,h_123/fill/w_106,h_30,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Asset%201%402x.png"
-                        alt="Asset 1@2x.png"
-                        style="width: 106px; height: 30px; object-fit: cover; object-position: 50% 50%;" width="106"
-                        height="30" fetchpriority="high">
+                    <img class="footer-logo"
+                        src="https://static.wixstatic.com/media/dd97f4_86c58c47370442a889e9a4e9db4eb00c~mv2.png/v1/crop/x_1,y_0,w_426,h_123/fill/w_106,h_30,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Asset%201%402x.png"
+                        alt="Asset" title="Description" loading="lazy">
                     <span> <a href="https://fsymbols.com/copyright/"><span>©</span>2023</a> ყველა უფლება
                         დაცულია</span>
                     <a href="#">წესები და პირობები</a>
@@ -344,23 +390,24 @@
                             <a href="https://www.facebook.com/tbcbank/" class="facebook">
                                 <img alt="Facebook" fetchpriority="high"
                                     src="https://static.wixstatic.com/media/ce6ec7c11b174c0581e20f42bb865ce3.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ce6ec7c11b174c0581e20f42bb865ce3.png"
-                                    style="width: 39px; height: 39px; object-fit: cover;">
+                                    style="width: 39px; height: 39px; object-fit: cover;" title="Description"
+                                    loading="lazy">
                             </a>
                         </li>
                         <li>
                             <a href="https://www.youtube.com/channel/UCGk9R2LV2ywOL80r8Xc6xtQ" class="youtobe">
                                 <img alt="Youtube" fetchpriority="high"
                                     src="https://static.wixstatic.com/media/71ac09a5a92848cc943bf2ca2a09a6d0.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/71ac09a5a92848cc943bf2ca2a09a6d0.png"
-                                    style="width: 39px; height: 39px; object-fit: cover;">
+                                    style="width: 39px; height: 39px; object-fit: cover;" title="Description"
+                                    loading="lazy">
                             </a>
                         </li>
                     </ul>
-                    <a class="send-email" href="mailto:itacademy@tbcbank.com.ge"><span>მოგვწერეთ</span></a>
+                    <a class="send-email" href="mailto:itacademy@tbcbank.com.ge">მოგვწერეთ</a>
                 </section>
             </div>
         </footer>
     </div>
-
 </body>
 
 </html>
