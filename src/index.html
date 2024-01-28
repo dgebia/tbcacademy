@@ -12,7 +12,7 @@
 <body>
     <div class="grid-container">
         <header class="header">
-            <nav>
+            <nav class="nav">
                 <div class="vector-image-container">
                     <a href="/" target="_self" class="vector-image-link">
                         <div class="vector-image">
@@ -81,14 +81,15 @@
                 <ul class="menu-items">
                     <li class="menu-item"><a class="menu-item-link" href="#">მთავარი</a></li>
                     <li class="menu-item"><a class="menu-item-link" href="#">TBC IT</a></li>
-                    <li class="menu-item"><a class="menu-item-link" href="#">TBC x USAID</a></li>
+                    <li class="menu-item"><a class="menu-item-link active" href="#">TBC x USAID</a></li>
                     <li class="menu-item"><a class="menu-item-link" href="#">რისკები</a></li>
                 </ul>
             </nav>
         </header>
         <main class="main">
             <section class="thesis">
-                <div class="thesis-container">
+                <div class="thesis-container"
+                    style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
                     <h1 class="thesis-title">TBC x USAID <br><span>ᲢᲔᲥᲜᲝᲚᲝᲒᲘᲣᲠᲘ ᲒᲐᲜᲐᲗᲚᲔᲑᲘᲡᲗᲕᲘᲡ</span></h1>
                 </div>
             </section>
@@ -194,9 +195,9 @@
             <section class="partners">
                 <h2 class="partners-section-title">პროექტის პარტნიორები</h2>
                 <div class="sliders-container">
-                    <div class="prev-svg-container">
-                        <svg id="prev" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            version="1.1" viewBox="0 0 256 256" xml:space="preserve">
+                    <div id="prev" class="prev-svg-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                            viewBox="0 0 256 256" xml:space="preserve">
                             <defs></defs>
                             <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
                                 transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
@@ -207,8 +208,8 @@
                             </g>
                         </svg>
                     </div>
-                    <div class="slider-sections">
-                        <section class="slider-section">
+                    <div class="sliders-section">
+                        <section class="slider-section1">
                             <figure class="usaid">
                                 <img id="usaid"
                                     src="https://static.wixstatic.com/media/93e8a3_a356bb7d201f4f47870683655e9e4120~mv2.png/v1/fill/w_369,h_111,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Asset%204_2x_edited.png"
@@ -257,9 +258,9 @@
                             </figure>
                         </section>
                     </div>
-                    <div class="next-svg-container">
-                        <svg id="next" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            version="1.1" viewBox="0 0 256 256" xml:space="preserve">
+                    <div id="next" class="next-svg-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                            viewBox="0 0 256 256" xml:space="preserve">
                             <defs></defs>
                             <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
                                 transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
@@ -270,15 +271,19 @@
                             </g>
                         </svg>
                     </div>
-                    <div class="sliders-button">
-                        <input type="radio" name="slider" id="btn1" checked>
-                        <lable for="btn1"></lable>
-                        <input type="radio" name="slider" id="btn2">
-                        <lable for="btn2"></lable>
-                        <input type="radio" name="slider" id="btn3">
-                        <lable for="btn3"></lable>
-                    </div>
-
+                    <nav class="sliders-button">
+                        <ol>
+                            <li>
+                                <a href="#" class="btn-link" data-target="slide1" aria-label="Slide 1"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-link" data-target="slide2" aria-label="Slide 2"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-link" data-target="slide3" aria-label="Slide 3"></a>
+                            </li>
+                        </ol>
+                    </nav>
                 </div>
             </section>
             <section class="pop-questions">

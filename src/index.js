@@ -1,39 +1,55 @@
 import './css/styles.css'
-
-var menu = document.querySelector('.menu-items');
-
-
-menu.addEventListener('click', (event) => {
-
-    if (event.target.matches('.menu-item-link')) {
-        const menuLinks = document.querySelectorAll('.menu-item-link')
-        menuLinks.forEach(link => {
-            link.classList.remove('active')
-            event.target.classList.add('active')
-            console.log(link);
+import {
+    handleClick, updateHeader, showSlide, prevSlide,
+    nextSlide,
+    navigateToSlide
+} from './functions/domFunctions';
 
 
-        })
-    }
+document.addEventListener('DOMContentLoaded', function () {
+    var header = document.querySelector('.header');
+    var scrollPosition = window.scrollY;
+    var menu = document.querySelector('.menu-items');
+    var questions = document.querySelectorAll('.question-header');
+    var currentSlide = 1;
+
+    window.addEventListener('scroll', () => updateHeader(header, scrollPosition));
+
+    document.getElementById('prev').addEventListener('click', () => prevSlide(currentSlide));
+    document.getElementById('next').addEventListener('click', () => nextSlide(currentSlide));
+
+    document.querySelectorAll('.btn-link').forEach(btn => {
+        btn.addEventListener('click', (event) => navigateToSlide(event, currentSlide));
+    });
+
+
+    menu.addEventListener('click', (event) => {
+
+        if (event.target.matches('.menu-item-link')) {
+            const menuLinks = document.querySelectorAll('.menu-item-link')
+            menuLinks.forEach(link => {
+                link.classList.remove('active')
+                event.target.classList.add('active')
+                console.log(link);
+
+
+            })
+        }
+    })
+
+
+    questions.forEach(question => {
+        question.addEventListener('click', handleClick);
+    });
+
+    setInterval(() => {
+        currentSlide = (currentSlide === 3) ? 1 : currentSlide + 1;
+        showSlide(currentSlide);
+    }, 5000);
 })
 
-var questions = document.querySelectorAll('.question-header');
 
-questions.forEach(question => {
-    question.addEventListener('click', handleClick);
-});
 
-function handleClick(event) {
-    const questionHeader = event.currentTarget;
-    const answers = document.querySelectorAll('.answer-open, .answer-close');
-    console.log(answers);
-    answers.forEach(answer => {
-        const isOpen = answer.classList.contains('answer-open');
-        answer.classList.remove('answer-open', 'answer-close');
-        answer.classList.add('answer-close');
-        if (!isOpen && answer.closest('.question') === questionHeader.parentElement) {
-            answer.classList.remove('answer-close');
-            answer.classList.add('answer-open');
-        }
-    });
-};
+
+
+
