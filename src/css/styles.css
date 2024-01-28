@@ -823,7 +823,6 @@ html {
 
     .partners {
         height: max-content;
-        height: max-content
     }
 
     .sliders-container {
@@ -832,7 +831,21 @@ html {
         height: max-content
     }
 
-    .slider-section {
+    .slider-section1 {
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        height: max-content
+    }
+
+    .slider-section2 {
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        height: max-content
+    }
+
+    .slider-section3 {
         display: flex;
         flex-direction: column;
         overflow: visible;
