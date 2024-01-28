@@ -1,6 +1,6 @@
 import './css/styles.css'
 import {
-    handleClick, updateHeader, showSlide, prevSlide,
+    handleClick, updateHeader, startSlideInterval, prevSlide,
     nextSlide,
     navigateToSlide
 } from './functions/domFunctions';
@@ -12,14 +12,15 @@ document.addEventListener('DOMContentLoaded', function () {
     var menu = document.querySelector('.menu-items');
     var questions = document.querySelectorAll('.question-header');
     var currentSlide = 1;
+    var slideInterval;
 
     window.addEventListener('scroll', () => updateHeader(header, scrollPosition));
 
-    document.getElementById('prev').addEventListener('click', () => prevSlide(currentSlide));
-    document.getElementById('next').addEventListener('click', () => nextSlide(currentSlide));
+    document.getElementById('prev').addEventListener('click', () => prevSlide(currentSlide, slideInterval));
+    document.getElementById('next').addEventListener('click', () => nextSlide(currentSlide, slideInterval));
 
     document.querySelectorAll('.btn-link').forEach(btn => {
-        btn.addEventListener('click', (event) => navigateToSlide(event, currentSlide));
+        btn.addEventListener('click', (event) => navigateToSlide(event, currentSlide, slideInterval));
     });
 
 
@@ -31,8 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 link.classList.remove('active')
                 event.target.classList.add('active')
                 console.log(link);
-
-
             })
         }
     })
@@ -42,10 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         question.addEventListener('click', handleClick);
     });
 
-    setInterval(() => {
-        currentSlide = (currentSlide === 3) ? 1 : currentSlide + 1;
-        showSlide(currentSlide);
-    }, 5000);
+    startSlideInterval(currentSlide, slideInterval)
 })
 
 

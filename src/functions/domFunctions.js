@@ -26,7 +26,7 @@ export function handleClick(event) {
     });
 };
 
-export function showSlide(slideNumber) {
+export function showSlide(slideNumber, slideInterval) {
     document.querySelectorAll('.slider-section1, .slider-section2, .slider-section3').forEach(slide => {
         slide.style.display = 'none';
     });
@@ -37,23 +37,40 @@ export function showSlide(slideNumber) {
     }
 }
 
-export function prevSlide(currentSlide) {
+export function prevSlide(currentSlide, slideInterval) {
+    stopSlideInterval(slideInterval);
     currentSlide = (currentSlide === 1) ? 3 : currentSlide - 1;
     showSlide(currentSlide);
+    startSlideInterval(currentSlide, slideInterval)
+
 }
 
-export function nextSlide(currentSlide) {
+export function nextSlide(currentSlide, slideInterval) {
+    stopSlideInterval(slideInterval);
     currentSlide = (currentSlide === 3) ? 1 : currentSlide + 1;
     showSlide(currentSlide);
+    startSlideInterval(currentSlide, slideInterval)
+
 }
 
-export function navigateToSlide(event, currentSlide) {
+export function navigateToSlide(event, currentSlide, slideInterval) {
     event.preventDefault();
-
+    stopSlideInterval(slideInterval);
     const targetSlide = event.target.getAttribute('data-target');
     if (targetSlide) {
         currentSlide = parseInt(targetSlide.slice(-1));
-        showSlide(currentSlide);
+        showSlide(currentSlide,);
+        startSlideInterval(currentSlide, slideInterval)
     }
 }
 
+export function startSlideInterval(currentSlide, slideInterval) {
+    slideInterval = setInterval(() => {
+        currentSlide = (currentSlide === 3) ? 1 : currentSlide + 1;
+        showSlide(currentSlide);
+    }, 5000);
+}
+
+function stopSlideInterval(slideInterval) {
+    clearInterval(slideInterval);
+}
