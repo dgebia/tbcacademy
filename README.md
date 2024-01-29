@@ -35,8 +35,8 @@
 1. რეპოზიტორის კლონირება: `git clone https://github.com/dgebia/tbcacademy`.
 2. გადადით პროექტის დირექტორიაში: `cd tbcacademy`.
 3. დეფენდენსების ინსტალირება: `npm install`.
-4. პროექტის გაშვება დაბილდვის გარეშე: `npm run start`.
-5. საჭიროების შემთხვევაში, პროექტის დაბილდვა: `npm run build`
+4. პროექტის გაშვება დაბილდვის გარეშე: `npm run dev`.
+5. პროექტის დაბილდვა: `npm run build`
 
 [tbcacademy]: https://www.tbcacademy.ge/
 [ვებ გვერდი]: https://www.tbcacademy.ge/usaid
